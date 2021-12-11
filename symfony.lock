@@ -45,6 +45,19 @@
             "src/Repository/.gitignore"
         ]
     },
+    "doctrine/doctrine-migrations-bundle": {
+        "version": "3.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.1",
+            "ref": "ee609429c9ee23e22d6fa5728211768f51ed2818"
+        },
+        "files": [
+            "config/packages/doctrine_migrations.yaml",
+            "migrations/.gitignore"
+        ]
+    },
     "doctrine/event-manager": {
         "version": "1.1.1"
     },
@@ -56,6 +69,9 @@
     },
     "doctrine/lexer": {
         "version": "1.2.1"
+    },
+    "doctrine/migrations": {
+        "version": "3.3.2"
     },
     "doctrine/orm": {
         "version": "2.10.3"
@@ -74,6 +90,12 @@
             "version": "3.0",
             "ref": "b131e6cbfe1b898a508987851963fff485986285"
         }
+    },
+    "friendsofphp/proxy-manager-lts": {
+        "version": "v1.0.5"
+    },
+    "laminas/laminas-code": {
+        "version": "4.5.0"
     },
     "nikic/php-parser": {
         "version": "v4.13.2"
@@ -220,6 +242,9 @@
     "symfony/property-info": {
         "version": "v5.4.0"
     },
+    "symfony/proxy-manager-bridge": {
+        "version": "v5.4.0"
+    },
     "symfony/routing": {
         "version": "5.4",
         "recipe": {
@@ -262,6 +287,9 @@
     },
     "symfony/service-contracts": {
         "version": "v2.5.0"
+    },
+    "symfony/stopwatch": {
+        "version": "v5.4.0"
     },
     "symfony/string": {
         "version": "v5.4.0"
