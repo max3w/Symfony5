@@ -10,7 +10,7 @@ class ConferenceController extends AbstractController
 {
     /**
      * //@Route("/conference", name="conference")
-     * @Route('/', name: 'homepage')
+     * @Route("/", name="homepage")
      */
     public function index(): Response
     {
