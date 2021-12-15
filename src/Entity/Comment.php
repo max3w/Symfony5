@@ -28,37 +28,37 @@ class Comment
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    #[Groups(['comment:list', 'comment:item'])]
+    [Groups(['comment:list', 'comment:item'])]
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    #[Groups(['comment:list', 'comment:item'])]
+    [Groups(['comment:list', 'comment:item'])]
     private $author;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    #[Groups(['comment:list', 'comment:item'])]
+    [Groups(['comment:list', 'comment:item'])]
     private $text;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    #[Groups(['comment:list', 'comment:item'])]
+    [Groups(['comment:list', 'comment:item'])]
     private $email;
 
     /**
      * @ORM\Column(type="datetime_immutable")
      */
-    #[Groups(['comment:list', 'comment:item'])]
+    [Groups(['comment:list', 'comment:item'])]
     private $createdAt;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    #[Groups(['comment:list', 'comment:item'])]
+    [Groups(['comment:list', 'comment:item'])]
     private $photoFilename;
 
     public function __toString(): string
