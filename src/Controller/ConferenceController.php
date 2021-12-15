@@ -23,6 +23,7 @@ class ConferenceController extends AbstractController
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <meta property="og:image" content="/img/symfony.png" />
   <title>Symfony 5 test site | Max3w</title>
  </head>
  <body>
