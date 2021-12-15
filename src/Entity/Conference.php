@@ -2,22 +2,26 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Core\Annotation\ApiResource; //add API
-use Symfony\Component\Serializer\Annotation\Groups; //add API
-use App\Repository\ConferenceRepository;
-use Doctrine\ORM\Mapping as ORM;
+ use ApiPlatform\Core\Annotation\ApiResource;
+ use App\Repository\ConferenceRepository;
+ use Doctrine\Common\Collections\ArrayCollection;
+ use Doctrine\Common\Collections\Collection;
+ use Doctrine\ORM\Mapping as ORM;
+ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+ use Symfony\Component\Serializer\Annotation\Groups;
+ use Symfony\Component\String\Slugger\SluggerInterface;
 
-/**
- * @ORM\Entity(repositoryClass=ConferenceRepository::class)
- *
- *
- * @ApiResource(
- *     collectionOperations={"get"={"normalization_context"={"groups"="conference:list"}}},
- *     itemOperations={"get"={"normalization_context"={"groups"="conference:item"}}},
- *     order={"year"="DESC", "city"="ASC"},
- *     paginationEnabled=false
- * )
- */
+ /**
+  * @ORM\Entity(repositoryClass=ConferenceRepository::class)
+  * @UniqueEntity("slug")
+  *
+  * @ApiResource(
+  *     collectionOperations={"get"={"normalization_context"={"groups"="conference:list"}}},
+  *     itemOperations={"get"={"normalization_context"={"groups"="conference:item"}}},
+  *     order={"year"="DESC", "city"="ASC"},
+  *     paginationEnabled=false
+  * )
+  */
 class Conference
 {
     /**
