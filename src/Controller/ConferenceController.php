@@ -51,7 +51,7 @@ class ConferenceController extends AbstractController
         let description = $('#description').val();
         let content = $('#content').val();
         
-        $.post('/api/test_a_p_is'.{
+        $.post('/api/test_a_p_is',{
             Page:page,
             Title:title,
             Description:description,
