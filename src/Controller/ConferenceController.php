@@ -33,13 +33,17 @@ class ConferenceController extends AbstractController
   
   <p>
   
-  <div class="form text-center">
-      <label for="Page">Page</label><input id="page" type="text" name="Page">
-      <label for="Title">Title</label><input id="title" type="text" name="Title">
-      <label for="Description">Description</label><input id="description" type="text" name="Description">
-      <label for="Content">Content</label><input id="content" type="text" name="Content">
-      <button type="submit" name="button" id="submit">Отправить</button>
-  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+    <div class="form text-center"><hr>
+    <p><label for="Page">Page:<span class="red">*</span></label><input id="page" type="text" name="Page"></p>
+    <p><label for="Title">Title:<span class="red">*</span></label><input id="title" type="text" name="Title"></p>
+    <p><label for="Description">Description:<span class="red">*</span></label><input id="description" type="text" name="Description"></p>
+    <p><label for="Content">Content:<span class="red">*</span></label><input id="content" type="text" name="Content"></p><hr>
+    <button type="submit" class="btn btn-success btn-lg" name="button" id="submit"> <span class="glyphicon glyphicon-new-window"></span> Отправить </button>
+    </div></div><div class="col-md-4"></div>
+   </div>
 
   <script type="text/javascript">
     $(document).ready(function() {
@@ -90,6 +94,15 @@ class ConferenceController extends AbstractController
   <p><a href="/admin">Go to <b>Admin</b></a></p>
   </div>
   <style>
+  span.red {
+    color: red;
+}
+  .form p {
+    width: 85%;
+    margin: 3px auto;
+    display: flex;
+    justify-content: space-between;
+}
   body {
     margin-bottom: 20px;
     background-image: url('/img/world_dots.png');
