@@ -57,8 +57,7 @@ class ConferenceController extends AbstractController
             Content:content  
         }).done(function(data) {
         alert(data);
-        
-        });
+        }, 'json');
     })
     });
   </script>
