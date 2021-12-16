@@ -13,10 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity(repositoryClass=CommentRepository::class)
  *
  * @ApiResource(
- *     collectionOperations={"get"={"normalization_context"={"groups"="comment:list"}}},
- *     itemOperations={"get"={"normalization_context"={"groups"="comment:item"}}},
- *     order={"createdAt"="DESC"},
- *     paginationEnabled=false
+ * normalizationContext={"groups"={"my_comment:read"}}
  * )
  *
  * @ApiFilter(SearchFilter::class, properties={"conference": "exact"})
@@ -27,38 +24,44 @@ class Comment
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"my_coment:read"})
      */
-    #[Groups(['comment:list', 'comment:item'])]
+
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"my_coment:read"})
      */
-    #[Groups(['comment:list', 'comment:item'])]
+
     private $author;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"my_coment:read"})
      */
-    #[Groups(['comment:list', 'comment:item'])]
+
     private $text;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"my_coment:read"})
      */
-    #[Groups(['comment:list', 'comment:item'])]
+
     private $email;
 
     /**
      * @ORM\Column(type="datetime_immutable")
+     * @Groups({"my_comment:read"})
      */
-    #[Groups(['comment:list', 'comment:item'])]
+
     private $createdAt;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"my_comment:read"})
      */
-    #[Groups(['comment:list', 'comment:item'])]
+
     private $photoFilename;
 
     public function __toString(): string
