@@ -50,15 +50,34 @@ class ConferenceController extends AbstractController
         let description = $('#description').val();
         let content = $('#content').val();
         
-        $.post('/api/test_a_p_is',{
+        
+        jQuery.ajax ({
+            url: '/api/test_a_p_is',
+            type: "POST",
+            data: JSON.stringify({
+            
+                Page:page,
+                Title:title,
+                Description:description,
+                Content:content
+            
+            }),
+            dataType: "json",
+            contentType: "application/ld+json",
+            success: function(){
+            alert(data);
+    }
+});
+
+      /*  $.post('/api/test_a_p_is',{
             Page:page,
             Title:title,
             Description:description,
-            Content:content,
-            contentType:"application/ld+json\"
+            Content:content
         }).done(function(data) {
         alert(data);
-        });
+        });*/
+        
     })
     });
   </script>
