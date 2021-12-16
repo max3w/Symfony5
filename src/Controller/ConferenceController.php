@@ -24,6 +24,8 @@ class ConferenceController extends AbstractController
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <meta property="og:image" content="/img/symfony.png" />
   <title>Symfony 5 test site | Max3w</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
  </head>
  <body>
  <div align="center">
@@ -31,15 +33,14 @@ class ConferenceController extends AbstractController
   
   <p>
   
-  <ul>
-  <li><label for="Page">Page</label><input id="page" type="text" name="Page"></li>
-  <li><label for="Title">Title</label><input id="title" type="text" name="Title"></li>
-  <li><label for="Description">Description</label><input id="description" type="text" name="Description"></li>
-  <li><label for="Content">Content</label><input id="content" type="text" name="Content"></li>
-  <li><button type="submit" name="button" id="submit">Отправить</button></li>
-  </ul>
+  <div class="form text-center">
+      <label for="Page">Page</label><input id="page" type="text" name="Page">
+      <label for="Title">Title</label><input id="title" type="text" name="Title">
+      <label for="Description">Description</label><input id="description" type="text" name="Description">
+      <label for="Content">Content</label><input id="content" type="text" name="Content">
+      <button type="submit" name="button" id="submit">Отправить</button>
+  </div>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
   <script type="text/javascript">
     $(document).ready(function() {
 
