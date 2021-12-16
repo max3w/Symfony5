@@ -55,7 +55,7 @@ class ConferenceController extends AbstractController
             Title:title,
             Description:description,
             Content:content,
-            contentType:"application/json; charset=utf-8"
+            contentType:"application/ld+json\"
         }).done(function(data) {
         alert(data);
         });
