@@ -11,9 +11,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * @ORM\Entity(repositoryClass=TestAPIRepository::class)
  *
  * @ApiResource(
- *     collectionOperations={"get"={"normalization_context"={"groups"="conference:list"}}},
- *     itemOperations={"get"={"normalization_context"={"groups"="conference:item"}}},
- *     paginationEnabled=false
+ * normalizationContext={"groups"={"my_listing:read"}}
  * )
  */
 
@@ -23,32 +21,32 @@ class TestAPI
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"my_listing:read"})
      */
-    #[Groups(['conference:list', 'conference:item'])]
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"my_listing:read"})
      */
-    #[Groups(['conference:list', 'conference:item'])]
     private $Page;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"my_listing:read"})
      */
-    #[Groups(['conference:list', 'conference:item'])]
     private $Title;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"my_listing:read"})
      */
-    #[Groups(['conference:list', 'conference:item'])]
     private $Description;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"my_listing:read"})
      */
-    #[Groups(['conference:list', 'conference:item'])]
     private $Content;
 
     public function getId(): ?int
