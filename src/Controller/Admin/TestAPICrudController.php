@@ -19,6 +19,7 @@ class TestAPICrudController extends AbstractCrudController
             IdField::new('id'),
             TextField::new('title'),
             TextEditorField::new('description'),
+            TextEditorField::new('content'),
         ];
     }
     */
