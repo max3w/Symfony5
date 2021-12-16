@@ -65,7 +65,7 @@ class ConferenceController extends AbstractController
             dataType: "json",
             contentType: "application/ld+json",
             success: function(){
-            alert(data);
+            alert("Данные отправлены!");
     }
 });
 
