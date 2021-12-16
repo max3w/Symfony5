@@ -54,10 +54,11 @@ class ConferenceController extends AbstractController
             Page:page,
             Title:title,
             Description:description,
-            Content:content  
+            Content:content,
+            contentType:"application/json; charset=utf-8"
         }).done(function(data) {
         alert(data);
-        }, 'json');
+        });
     })
     });
   </script>
