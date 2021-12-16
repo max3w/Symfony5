@@ -46,7 +46,7 @@ class TestAPI
     private $Description;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="string", length=255)
      */
     #[Groups(['conference:list', 'conference:item'])]
     private $Content;
