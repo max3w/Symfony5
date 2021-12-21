@@ -34,10 +34,14 @@ class Product
      */
     private $price;
 
+    #/** //old
+    # * @ORM\ManyToOne(targetEntity=Specifications::class, inversedBy="products")
+    # * @ORM\JoinColumn(nullable=false)
+    # */
     /**
-     * @ORM\ManyToOne(targetEntity=Specifications::class, inversedBy="products")
-     * @ORM\JoinColumn(nullable=false)
-     */
+    * @ORM\ManyToOne(targetEntity=Specifications::class, inversedBy="products", cascade={"persist"})
+    * @ORM\JoinColumn(name="Specifications_id", referencedColumnName="id",onDelete="SET NULL")
+    */
     private $specifications;
 
     public function getId(): ?int
