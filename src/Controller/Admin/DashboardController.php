@@ -38,6 +38,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linktoRoute('Back to the website', 'fas fa-home', 'homepage');
         yield MenuItem::linkToCrud('Admin', 'fa fa-address-book', Admin::class);
         yield MenuItem::linkToCrud('Product', 'fab fa-product-hunt', Product::class);
+        yield MenuItem::linkToCrud('Specifications', 'fa fa-puzzle-piece', Specifications::class);
         yield MenuItem::linkToCrud('TestAPI', 'fas fa-paper-plane', TestAPI::class);
         yield MenuItem::linkToCrud('Conferences', 'fas fa-map-marker-alt', Conference::class);
         yield MenuItem::linkToCrud('Comments', 'fas fa-comments', Comment::class);

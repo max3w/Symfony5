@@ -13,7 +13,7 @@ namespace App\Entity;
 
  /**
   * @ORM\Entity(repositoryClass=ConferenceRepository::class)
-  * @UniqueEntity("slug")
+  * @UniqueEntity("id")
   *
   * @ApiResource(
   * normalizationContext={"groups"={"my_conf:read"}}
