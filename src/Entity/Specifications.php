@@ -30,7 +30,7 @@ class Specifications
     private $color;
 
     /**
-     * @ORM\OneToMany(targetEntity=Product::class, mappedBy="specifications")
+     * @ORM\OneToMany(targetEntity=Product::class, mappedBy="specifications", orphanRemoval=true) /если Productудаляется из Category, он будет удален из базы данных полностью.
      */
     private $products;
 
