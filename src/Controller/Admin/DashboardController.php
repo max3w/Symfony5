@@ -22,7 +22,7 @@ class DashboardController extends AbstractDashboardController
     {
         //return parent::index();
         $routeBuilder = $this->get(AdminUrlGenerator::class);
-        $url = $routeBuilder->setController(ConferenceCrudController::class)->generateUrl();
+        $url = $routeBuilder->setController(ProductCrudController::class)->generateUrl();
         return $this->redirect($url);
     }
 
