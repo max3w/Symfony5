@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Comment; //add
 use App\Entity\Conference;
 use App\Entity\TestAPI;
+use App\Entity\Product;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
