@@ -24,7 +24,6 @@
         "symfony/expression-language": "5.4.*",
         "symfony/flex": "^1.17|^2",
         "symfony/framework-bundle": "5.4.*",
-        "symfony/mailer": "5.4.*",
         "symfony/maker-bundle": "^1.36",
         "symfony/property-access": "5.4.*",
         "symfony/property-info": "5.4.*",
@@ -35,7 +34,6 @@
         "symfony/twig-bundle": "5.4.*",
         "symfony/validator": "5.4.*",
         "symfony/yaml": "5.4.*",
-        "symfonycasts/verify-email-bundle": "^1.7",
         "webonyx/graphql-php": "^14.11"
     },
     "config": {
