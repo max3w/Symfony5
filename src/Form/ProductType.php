@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Product;
+use App\Entity\Specifications; //Обьявляем Specifications
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -15,6 +16,10 @@ class ProductType extends AbstractType
             ->add('sku')
             ->add('name')
             ->add('price')
+            //add Specifications ->id; ->size; ->color;
+            //->id;
+            ->add('size')
+            ->add('color')
         ;
     }
 
