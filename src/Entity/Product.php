@@ -34,6 +34,12 @@ class Product
      */
     private $price;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Specifications::class, inversedBy="products")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $specifications;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -71,6 +77,18 @@ class Product
     public function setPrice(int $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getSpecifications(): ?Specifications
+    {
+        return $this->specifications;
+    }
+
+    public function setSpecifications(?Specifications $specifications): self
+    {
+        $this->specifications = $specifications;
 
         return $this;
     }
