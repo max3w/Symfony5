@@ -18,7 +18,7 @@ class ProductType extends AbstractType
         ->add('Specifications',EntityType::class,[
             'class' => Specifications::class,
             'choice_label' => 'size',
-            'label' => $this->translator->trans('admin.product.category'),
+            'label' => '111',
             'attr'=>[
                 'class'=>'form-control'
             ],
