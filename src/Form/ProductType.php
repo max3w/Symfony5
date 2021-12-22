@@ -13,13 +13,23 @@ class ProductType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+
+
+        ->add('category',EntityType::class,[
+            'class' => Category::class,
+            'choice_label' => 'name',
+            'label' => $this->translator->trans('admin.product.category'),
+            'attr'=>[
+                'class'=>'form-control'
+            ],
+        ])
+
             ->add('sku')
             ->add('name')
             ->add('price')
             //add Specifications ->id; ->size; ->color;
             //->id;
-            ->add('size')
-            ->add('color')
+            //->add('size') ?
         ;
     }
 
