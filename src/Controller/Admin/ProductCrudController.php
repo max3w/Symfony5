@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Product;
+use EasyCorp\Bundle\EasyAdminBundle\Field\FormField; //Добавляем чтоб видело новые поля
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class ProductCrudController extends AbstractCrudController
@@ -12,14 +13,15 @@ class ProductCrudController extends AbstractCrudController
         return Product::class;
     }
 
-    /*
+    
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            IdField::new('sku'),
+            TextField::new('name'),
+            TextEditorField::new('price'),
+            AssociationField::new('specifications'),
         ];
     }
-    */
+    
 }
