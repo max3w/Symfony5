@@ -98,7 +98,7 @@ class Specifications
         return $this;
     }
 
-    public function __toString(){
-        return $this->label;
-    }
+    /*public function __toString(){
+        return $this->size;
+    }*/
 }
