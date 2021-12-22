@@ -15,8 +15,12 @@ class ProductType extends AbstractType
     {
         $builder
 
+            ->add('sku')
+            ->add('name')
+            ->add('price')
 
-        ->add('Specifications',EntityType::class,[
+            //Add my option
+            ->add('Specifications',EntityType::class,[
             'class' => Specifications::class,
             'choice_label' => 'size',
             'label' => '111',
@@ -24,13 +28,7 @@ class ProductType extends AbstractType
                 'class'=>'form-control'
             ],
         ])
-
-            ->add('sku')
-            ->add('name')
-            ->add('price')
-            //add Specifications ->id; ->size; ->color;
-            //->id;
-            //->add('size') ?
+            //
         ;
     }
 
