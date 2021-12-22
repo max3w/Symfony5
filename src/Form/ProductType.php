@@ -3,7 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Product;
-use App\Form\EntityType; //Обьявляем и этот класс.
+use Symfony\Bridge\Doctrine\Form\Type\EntityType; //Обьявляем и это пространство имен.
 use App\Entity\Specifications; //Обьявляем Specifications
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
