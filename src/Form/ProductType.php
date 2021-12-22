@@ -23,7 +23,7 @@ class ProductType extends AbstractType
             ->add('Specifications',EntityType::class,[
             'class' => Specifications::class,
             'choice_label' => 'size',
-            'label' => '111',
+            'label' => 'Specifications',
             'attr'=>[
                 'class'=>'form-control'
             ],
