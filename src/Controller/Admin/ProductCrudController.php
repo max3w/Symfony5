@@ -22,7 +22,7 @@ class ProductCrudController extends AbstractCrudController
             TextField::new('sku'),
             TextField::new('name'),
             NumberField::new('price'),
-            AssociationField::new('specifications'),
+            ArrayField::new('specifications'),
         ];
     }
     
