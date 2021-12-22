@@ -99,6 +99,6 @@ class Specifications
     }
 
     public function __toString(){
-        return $this;
+        return $this->name;
     }
 }
