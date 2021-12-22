@@ -3,8 +3,8 @@
 namespace App\Form;
 
 use App\Entity\Product;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType; //Обьявляем и это пространство имен.
 use App\Entity\Specifications; //Обьявляем Specifications
+use Symfony\Bridge\Doctrine\Form\Type\EntityType; //
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
