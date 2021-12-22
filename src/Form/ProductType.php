@@ -15,9 +15,9 @@ class ProductType extends AbstractType
         $builder
 
 
-        ->add('category',EntityType::class,[
-            'class' => Category::class,
-            'choice_label' => 'name',
+        ->add('Specifications',EntityType::class,[
+            'class' => Specifications::class,
+            'choice_label' => 'size',
             'label' => $this->translator->trans('admin.product.category'),
             'attr'=>[
                 'class'=>'form-control'
