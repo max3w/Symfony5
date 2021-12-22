@@ -3,7 +3,9 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Product;
-use EasyCorp\Bundle\EasyAdminBundle\Field\FormField; //Добавляем чтоб видело новые поля
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField; //Добавляем чтоб видело новые поля
+use EasyCorp\Bundle\EasyAdminBundle\Field\CurrencyField; //
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField; //
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class ProductCrudController extends AbstractCrudController
@@ -19,7 +21,7 @@ class ProductCrudController extends AbstractCrudController
         return [
             TextField::new('sku'),
             TextField::new('name'),
-            TextEditorField::new('price'),
+            CurrencyField::new('price'),
             AssociationField::new('specifications'),
         ];
     }
