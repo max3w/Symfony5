@@ -40,7 +40,7 @@ class Product
     # */
     /**
     * @ORM\ManyToOne(targetEntity=Specifications::class, inversedBy="products", cascade={"persist"})
-    * @ORM\JoinColumn(name="Specifications_id", referencedColumnName="id",onDelete="SET NULL")
+    * @ORM\JoinColumn(name="Specifications_id", referencedColumnName="size",onDelete="SET NULL")
     */
     private $specifications;
 
