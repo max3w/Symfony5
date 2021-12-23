@@ -24,10 +24,10 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
     <div class="form text-center"><hr>
-    <p><label for="Page">Page:<span class="red">*</span></label><input id="page" type="text" name="Page"></p>
-    <p><label for="Title">Title:<span class="red">*</span></label><input id="title" type="text" name="Title"></p>
-    <p><label for="Description">Description:<span class="red">*</span></label><input id="description" type="text" name="Description"></p>
-    <p><label for="Content">Content:<span class="red">*</span></label><input id="content" type="text" name="Content"></p><hr>
+    <p><label for="Sku">Артикул:<span class="red">*</span></label><input id="sku" type="text" name="Sku"></p>
+    <p><label for="Name">Название:<span class="red">*</span></label><input id="name" type="text" name="Name"></p>
+    <p><label for="Price">Цена:<span class="red">*</span></label><input id="price" type="text" name="Price"></p>
+    <p><label for="Specifications">Content:<span class="red">*</span></label><input id="specifications" type="text" name="specifications"></p><hr>
     <button type="submit" class="btn btn-success btn-lg" name="button" id="submit"> <span class="glyphicon glyphicon-new-window"></span> Отправить </button>
     </div></div><div class="col-md-4"></div>
    </div>
@@ -37,21 +37,24 @@
 
         $('#submit').on('click', function() {
         
-        let page = $('#page').val();
-        let title = $('#title').val();
-        let description = $('#description').val();
-        let content = $('#content').val();
+        let sku = $('#sku').val();
+        let name = $('#name').val();
+        let price = $('#price').val();
+        let specifications = $('#specifications').val();
         
         
         jQuery.ajax ({
-            url: '/api/test_a_p_is',
+            url: 'https://max3w.pp.ua/api/products',
             type: "POST",
             data: JSON.stringify({
             
-                Page:page,
-                Title:title,
-                Description:description,
-                Content:content
+                Sku:sku,
+                Name:name,
+                Price:price,
+                Specifications:
+                  {
+                   Size:specifications,
+                  }
             
             }),
             dataType: "json",
