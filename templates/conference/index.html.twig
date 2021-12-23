@@ -27,7 +27,7 @@
     <p><label for="Sku">Артикул:<span class="red">*</span></label><input id="sku" type="text" name="Sku"></p>
     <p><label for="Name">Название:<span class="red">*</span></label><input id="name" type="text" name="Name"></p>
     <p><label for="Price">Цена:<span class="red">*</span></label><input id="price" type="text" name="Price"></p>
-    <p><label for="Specifications">Content:<span class="red">*</span></label><input id="specifications" type="text" name="specifications"></p><hr>
+    <p><label for="Specifications">Размер:<span class="red">*</span></label><input id="specifications" type="text" name="specifications"></p><hr>
     <button type="submit" class="btn btn-success btn-lg" name="button" id="submit"> <span class="glyphicon glyphicon-new-window"></span> Отправить </button>
     </div></div><div class="col-md-4"></div>
    </div>
@@ -48,12 +48,16 @@
             type: "POST",
             data: JSON.stringify({
             
-                Sku:sku,
-                Name:name,
-                Price:price,
-                Specifications:
+                sku:sku,
+                name:name,
+                price:price,
+                specifications:
                   {
-                   Size:specifications,
+                   size:specifications,
+                   products:
+                    [
+                      "/api/products/1"
+                    ]
                   }
             
             }),
