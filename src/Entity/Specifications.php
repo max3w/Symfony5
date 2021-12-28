@@ -25,6 +25,11 @@ class Specifications
     private $size;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $color;
+
+    /**
      * @ORM\OneToMany(targetEntity=Product::class, mappedBy="specifications", orphanRemoval=true) /если Productудаляется из Category, он будет удален из базы данных полностью.
      */
     private $products;
@@ -47,6 +52,18 @@ class Specifications
     public function setSize(?string $size): self
     {
         $this->size = $size;
+
+        return $this;
+    }
+
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(?string $color): self
+    {
+        $this->color = $color;
 
         return $this;
     }
