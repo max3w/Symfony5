@@ -10,7 +10,6 @@ use Symfony\Component\Serializer\Annotation\Ignore;
 
 /**
  * @ORM\Entity(repositoryClass=SpecificationsRepository::class)
- * @Ignore()
  */
 class Specifications
 {
@@ -28,6 +27,7 @@ class Specifications
 
     /**
      * @ORM\OneToMany(targetEntity=Product::class, mappedBy="specifications", orphanRemoval=true) /если Productудаляется из Category, он будет удален из базы данных полностью.
+     * @Ignore()
      */
     private $products;
 
