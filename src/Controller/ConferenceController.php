@@ -1,10 +1,5 @@
 <?php
 
-use App\Entity\Product;
-use App\Form\ProductType;
-use App\Repository\ProductRepository;
-use Doctrine\ORM\EntityManagerInterface;
-
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -19,13 +14,9 @@ class ConferenceController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('product/index.html.twig', [
-            'controller_name' => 'ProductController',
-        ]);
-        /*
         return $this->render('conference/index.html.twig', [
             'controller_name' => 'ConferenceController',
         ]);
-        */
+        
     }
 }
