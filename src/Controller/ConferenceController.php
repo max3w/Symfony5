@@ -14,8 +14,13 @@ class ConferenceController extends AbstractController
      */
     public function index(): Response
     {
+        return $this->render('product/index.html.twig', [
+            'controller_name' => 'ProductController',
+        ]);
+        /*
         return $this->render('conference/index.html.twig', [
             'controller_name' => 'ConferenceController',
         ]);
+        */
     }
 }
