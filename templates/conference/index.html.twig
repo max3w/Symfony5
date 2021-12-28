@@ -39,24 +39,24 @@
         
         let sku = $('#sku').val();
         let name = $('#name').val();
-        let price = $('#price').val();
+        let int price = $('#price').val();
         let specifications = $('#specifications').val();
         
         
         jQuery.ajax ({
             url: 'https://max3w.pp.ua/api/products',
             type: "POST",
-            data: JSON.stringify({
+            //data: JSON.stringify({
             
-                sku:sku,
-                name:name,
-                price:price,
+                sku:'sku',
+                name:"name",
+                price:'price',
                 specifications:
                   {
-                   size:specifications,
+                   size:'specifications',
                   }
             
-            }),
+           // }),
             dataType: "json",
             contentType: "application/ld+json",
             success: function(){
