@@ -16,9 +16,9 @@ framework:
     #fragments: true
     php_errors:
         log: true
-framework:
+
     serializer:
-        circular_reference_handler: App\Utils\CircularReferenceHandler
+        circular_reference_handler: 'App\Utils\CircularReferenceHandler'
 when@test:
     framework:
         test: true

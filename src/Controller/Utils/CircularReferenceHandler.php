@@ -9,4 +9,3 @@ class CircularReferenceHandler
         return $object->getId();
     }
 }
-?>
