@@ -15,9 +15,6 @@ namespace App\Entity;
   * @ORM\Entity(repositoryClass=ConferenceRepository::class)
   * @UniqueEntity("id")
   *
-  //* @ApiResource(
-  //* normalizationContext={"groups"={"my_conf:read"}}
-  //* )
   */
 class Conference
 {
