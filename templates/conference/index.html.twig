@@ -46,7 +46,7 @@
         jQuery.ajax ({
             url: 'https://max3w.pp.ua/api/products',
             type: "POST",
-            data: ({
+            data: JSON.stringify({
             
                 sku:sku,
                 name:name,
