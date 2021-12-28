@@ -12,6 +12,7 @@
                 <th>Sku</th>
                 <th>Name</th>
                 <th>Price</th>
+                <th>Size</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -22,6 +23,7 @@
                 <td>{{ product.sku }}</td>
                 <td>{{ product.name }}</td>
                 <td>{{ product.price }}</td>
+                <td>{{ product.specifications }}</td>
                 <td>
                     <a href="{{ path('product_show', {'id': product.id}) }}">show</a>
                     <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
