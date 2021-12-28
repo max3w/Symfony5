@@ -26,7 +26,7 @@ class ConferenceController extends AbstractController
     public function index(Environment $twig, ProductRepository $productRepository): Response
      {
         return new Response($twig->render('conference/index.html.twig', [
-            'product' => $productRepository->findAll(),
+            'products' => $productRepository->findAll(),
         ]));
      }
 }
