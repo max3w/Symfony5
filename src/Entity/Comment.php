@@ -12,8 +12,6 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass=CommentRepository::class)
  *
- *
- * @ApiFilter(SearchFilter::class, properties={"conference": "exact"})
  */
 class Comment
 {
