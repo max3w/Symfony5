@@ -56,7 +56,7 @@ class Specifications
         return $this;
     }
 
-    public function getColor(): ?string
+    /*public function getColor(): ?string
     {
         return $this->color;
     }
@@ -66,7 +66,7 @@ class Specifications
         $this->color = $color;
 
         return $this;
-    }
+    }*/
 
     /**
      * @return Collection|Product[]
