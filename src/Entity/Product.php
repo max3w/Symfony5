@@ -10,7 +10,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
  */
-#[ApiResource(setHeader: [
+#[ApiResource(api_keys: [
     "X-Total-Count" => "10"
 ])]
 class Product
