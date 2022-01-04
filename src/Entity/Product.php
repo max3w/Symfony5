@@ -10,7 +10,13 @@ use Symfony\Component\Serializer\Annotation\Groups;
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
  */
-#[ApiResource]
+#[ApiResource](
+    cacheHeaders: [
+        "max_age" => 10,
+        "shared_max_age" => 100,
+        "vary" => ["Authorization", "Accept-Language"]
+    ]
+)
 class Product
 {
     /**
