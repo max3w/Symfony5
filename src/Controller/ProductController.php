@@ -78,4 +78,8 @@ class ProductController extends AbstractController
 
         return $this->redirectToRoute('product_index', [], Response::HTTP_SEE_OTHER);
     }
+
+    $response = new JsonResponse($product);
+        $response->headers->set('X-Total-Count', "1");
+        return $response;
 }
