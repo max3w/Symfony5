@@ -14,8 +14,8 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/product')]
 class ProductController extends AbstractController
 {
-    // sets a HTTP response header
-    $response->headers->set('X-Total-Count', '1');
+    $response = new Response('Content', '111');
+    $response->send();
 
     #[Route('/', name: 'product_index', methods: ['GET'])]
     public function index(ProductRepository $productRepository): Response
