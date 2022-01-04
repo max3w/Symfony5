@@ -79,8 +79,4 @@ class ProductController extends AbstractController
         return $this->redirectToRoute('product_index', [], Response::HTTP_SEE_OTHER);
     }
 
-    $view = $this
-    ->view($users, 200);
-    ->setHeader('X-Total-Count', '1');
-return $this->handleView($view);
 }
