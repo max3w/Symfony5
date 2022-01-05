@@ -5,11 +5,7 @@ api_platform:
         json: ['application/merge-patch+json']
     swagger:
         versions: [3]
-        api_keys:
-            apiKey:
-                name: Authorization
-                type: header
-                # persistAuthorization: true
+    header: '1111'
     title: 'Test API product Symfony 5'
     description: 'API description'
 
