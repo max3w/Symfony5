@@ -18,7 +18,7 @@ class ProductCrudController extends AbstractCrudController
 
     public function notifications(): Response
     {
-        return $this->render('templates/base.html.twig', [
+        return $this->render('conference/index.html.twig', [
             'X-Total-Count' => '111',
         ]);
     }
