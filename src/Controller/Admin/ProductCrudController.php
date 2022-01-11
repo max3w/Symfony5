@@ -7,7 +7,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextField; //Добавляем что
 use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField; //
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField; //
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use Symfony\Component\HttpFoundation\Response; //Включаем компонент заголовков
 
 class ProductCrudController extends AbstractCrudController
 {
@@ -16,13 +15,6 @@ class ProductCrudController extends AbstractCrudController
         return Product::class;
     }
 
-    public function notifications(): Response
-    {
-        return $this->render('conference/index.html.twig', [
-            'X-Total-Count' => '111',
-        ]);
-    }
-    
     public function configureFields(string $pageName): iterable
     {
         return [

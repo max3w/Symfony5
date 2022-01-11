@@ -4,6 +4,10 @@ namespace App\Controller\Admin;
 
 use App\Entity\TestAPI;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use Symfony\Component\HttpFoundation\Response; //Для передачи заголовка
+$response = new Response();
+$response->headers->set('111', '222');
+$response->send();
 
 class TestAPICrudController extends AbstractCrudController
 {
