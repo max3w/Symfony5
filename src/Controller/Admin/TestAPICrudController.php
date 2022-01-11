@@ -5,12 +5,17 @@ namespace App\Controller\Admin;
 use App\Entity\TestAPI;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use Symfony\Component\HttpFoundation\Response; //Для передачи заголовка
-$response = new Response();
-$response->headers->set('111', '222');
-$response->send();
 
 class TestAPICrudController extends AbstractCrudController
 {
+
+    public function notifications(): Response
+    {
+        return $this->render('conference/index.html.twig', [
+            'X-Total-Count' => '111',
+        ]);
+    }
+    
     public static function getEntityFqcn(): string
     {
         return TestAPI::class;
